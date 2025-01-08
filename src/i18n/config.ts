@@ -23,22 +23,15 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'fr', // Langue par défaut si aucune correspondance n'est trouvée
+    fallbackLng: 'fr',
     supportedLngs: ['fr', 'en', 'he'],
     detection: {
-      order: ['navigator', 'htmlTag', 'path', 'subdomain'], // Priorité de détection
-      caches: ['localStorage'], // Stockage de la préférence
-      lookupFromPathIndex: 0,
-      checkWhitelist: true
+      order: ['navigator', 'htmlTag', 'path', 'subdomain'],
+      caches: ['localStorage'],
     },
     interpolation: {
       escapeValue: false
     }
   });
-
-// Gestion de la direction du texte selon la langue
-i18n.on('languageChanged', (lng) => {
-  document.documentElement.dir = lng === 'he' ? 'rtl' : 'ltr';
-});
 
 export default i18n;

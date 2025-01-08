@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
 
@@ -14,6 +15,7 @@ interface FormData {
 
 export default function Reservation() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     nom: '',
     prenom: '',
@@ -71,8 +73,12 @@ export default function Reservation() {
     }
   };
 
+  const handleBack = () => {
+    navigate('/');
+  };
+
   return (
-    <>
+    <div className="container mx-auto px-4 py-8">
       <SEO 
         title={t('requestQuote') + ' - Transport Herzberg'}
         description={t('quoteDescription')}
@@ -83,15 +89,16 @@ export default function Reservation() {
         name={t('requestQuote')}
         description={t('quoteDescription')}
       />
+      <button
+        onClick={handleBack}
+        className="mb-4 px-4 py-2 bg-primary text-white rounded hover:bg-primary/90"
+      >
+        {t('backButton')}
+      </button>
       <div className="min-h-screen bg-background">
         {/* Main Content */}
         <main className="pt-24 px-4">
           <div className="container mx-auto max-w-2xl">
-            {/* Back Button */}
-            <a href="/" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">
-              ← {t('backButton')}
-            </a>
-
             {/* Title */}
             <h1 className="text-3xl font-bold mb-4">{t('requestQuote')}</h1>
             <p className="text-gray-600 mb-8">
@@ -229,6 +236,6 @@ export default function Reservation() {
           </div>
         </main>
       </div>
-    </>
+    </div>
   );
 }
