@@ -1,0 +1,61 @@
+{
+  "header": {
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "contactUs": "Contactez-nous"
+  },
+  "hero": {
+    "title": "Transport professionnel et fiable",
+    "subtitle": "Votre partenaire de confiance pour tous vos besoins de transport et déménagement",
+    "bookNow": "Réserver maintenant",
+    "ourServices": "Nos services"
+  },
+  "services": {
+    "title": "Nos Services",
+    "moving": {
+      "title": "Déménagement",
+      "description": "Service de déménagement complet"
+    },
+    "transport": {
+      "title": "Transport",
+      "description": "Transport de marchandises et de meubles"
+    },
+    "clearance": {
+      "title": "Débarras",
+      "description": "Service de débarras complet pour particuliers et professionnels"
+    },
+    "book": "Réserver"
+  },
+  "about": {
+    "title": "Notre Engagement",
+    "description": "Mon métier est un service de transport dédié à offrir des solutions de déplacements sûrs et pratiques. J'assure des services de transport personnalisés, adaptés à vos besoins spécifiques. Je m'engage à vous fournir des trajets confortables et sécurisés, tout en respectant les délais."
+  },
+  "testimonials": {
+    "title": "Témoignages Clients"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "address": "Tel Aviv, Israël",
+    "hours": {
+      "title": "Horaires d'ouverture",
+      "weekdays": "Lundi - Jeudi : 8h00 - 18h00",
+      "friday": "Vendredi : 8h00 - 14h00",
+      "sunday": "Dimanche : 8h00 - 18h00"
+    }
+  },
+  "booking": {
+    "title": "Réserver un transport",
+    "selectDate": "Choisissez une date",
+    "selectDateTime": "Sélectionnez une date et une heure",
+    "description": "Sélectionnez la date souhaitée pour votre transport",
+    "confirm": "Confirmer la réservation",
+    "nextAvailable": "Prochaine date disponible",
+    "noAvailability": "Aucune disponibilité",
+    "serviceDetails": "Détails du service",
+    "timezone": "Heure normale d'Europe centrale (UTC+1)"
+  },
+  "footer": {
+    "rights": "Tous droits réservés"
+  }
+}

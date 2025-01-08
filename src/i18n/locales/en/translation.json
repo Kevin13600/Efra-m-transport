@@ -1,0 +1,61 @@
+{
+  "header": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "title": "Professional and Reliable Transport",
+    "subtitle": "Your trusted partner for all your transport and moving needs",
+    "bookNow": "Book Now",
+    "ourServices": "Our Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "moving": {
+      "title": "Moving",
+      "description": "Complete moving service"
+    },
+    "transport": {
+      "title": "Transport",
+      "description": "Transport of goods and furniture"
+    },
+    "clearance": {
+      "title": "Clearance",
+      "description": "Complete clearance service for individuals and professionals"
+    },
+    "book": "Book"
+  },
+  "about": {
+    "title": "Our Commitment",
+    "description": "My profession is a transport service dedicated to offering safe and convenient transportation solutions. I provide personalized transport services, tailored to your specific needs. I am committed to providing comfortable and secure journeys while respecting deadlines."
+  },
+  "testimonials": {
+    "title": "Client Testimonials"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Tel Aviv, Israel",
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Thursday: 8:00 AM - 6:00 PM",
+      "friday": "Friday: 8:00 AM - 2:00 PM",
+      "sunday": "Sunday: 8:00 AM - 6:00 PM"
+    }
+  },
+  "booking": {
+    "title": "Book a Transport",
+    "selectDate": "Choose a Date",
+    "selectDateTime": "Select Date and Time",
+    "description": "Select your desired date for transport",
+    "confirm": "Confirm Booking",
+    "nextAvailable": "Next Available Date",
+    "noAvailability": "No Availability",
+    "serviceDetails": "Service Details",
+    "timezone": "Central European Time (UTC+1)"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}
