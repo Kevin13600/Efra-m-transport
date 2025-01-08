@@ -14,7 +14,6 @@ import { TruckIcon, BoxIcon, HomeIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
 import franckImage from '../assets/franck.webp';
