@@ -3,9 +3,18 @@ import { useTranslation } from 'react-i18next';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
 
+interface FormData {
+  nom: string;
+  prenom: string;
+  adresse: string;
+  email: string;
+  telephone: string;
+  details: string;
+}
+
 export default function Reservation() {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     nom: '',
     prenom: '',
     adresse: '',
@@ -31,7 +40,7 @@ export default function Reservation() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('http://localhost:3001/api/submit-form', {
+      const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
