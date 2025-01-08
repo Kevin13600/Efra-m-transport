@@ -12,14 +12,14 @@ import {
 import { TruckIcon, BoxIcon, HomeIcon } from 'lucide-react';
 // Import des composants de routage
 import { Link } from 'react-router-dom';
-// Import des composants SEO
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 import SEO from '@/components/SEO';
 import SchemaOrg from '@/components/SchemaOrg';
 import franckImage from '../assets/franck.webp';
 import openTruckImage from '../assets/opentruck.webp';
 import openTruck2Image from '../assets/opentruck2.webp';
-import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
 
 interface Testimonial {
   id: number;
