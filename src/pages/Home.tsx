@@ -21,7 +21,25 @@ import openTruck2Image from '../assets/opentruck2.webp';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
-const HebrewCarousel = ({ testimonials, t }) => (
+interface Testimonial {
+  id: number;
+  text: string;
+  name: string;
+}
+
+interface CarouselProps {
+  testimonials: Testimonial[];
+  t: (key: string) => string;
+  dir?: string;
+}
+
+interface Service {
+  title: string;
+  description: string;
+  icon: any;
+}
+
+const HebrewCarousel = ({ testimonials, t }: CarouselProps) => (
   <div className="grid grid-cols-1 gap-4 max-w-xl mx-auto" dir="rtl">
     {testimonials.map((testimonial) => (
       <div key={testimonial.id} className="w-full">
@@ -38,7 +56,7 @@ const HebrewCarousel = ({ testimonials, t }) => (
   </div>
 );
 
-const DefaultCarousel = ({ testimonials, t, dir }) => (
+const DefaultCarousel = ({ testimonials, t, dir = "ltr" }: CarouselProps) => (
   <Carousel
     opts={{
       align: "start",
@@ -49,9 +67,9 @@ const DefaultCarousel = ({ testimonials, t, dir }) => (
   >
     <CarouselContent>
       {testimonials.map((testimonial) => (
-        <CarouselItem key={testimonial.id} className="md:basis-full">
+        <CarouselItem key={testimonial.id} className="md:basis-1/1">
           <Card>
-            <CardContent className="p-6" dir={dir}>
+            <CardContent className="p-6">
               <blockquote className="space-y-2">
                 <p className="text-lg mb-4">{t(testimonial.text)}</p>
                 <footer className="text-sm font-semibold">{t(testimonial.name)}</footer>
@@ -61,23 +79,21 @@ const DefaultCarousel = ({ testimonials, t, dir }) => (
         </CarouselItem>
       ))}
     </CarouselContent>
-    <div className="flex justify-center gap-2 mt-4" dir="ltr">
-      <CarouselPrevious className="static" />
-      <CarouselNext className="static" />
-    </div>
+    <CarouselPrevious />
+    <CarouselNext />
   </Carousel>
 );
 
 export default function Home() {
   const { t, i18n } = useTranslation();
-  const [testimonials] = useState([
+  const [testimonials] = useState<Testimonial[]>([
     { id: 1, name: 'testimonial1Name', text: 'testimonial1Text' },
     { id: 2, name: 'testimonial2Name', text: 'testimonial2Text' },
     { id: 3, name: 'testimonial3Name', text: 'testimonial3Text' },
   ]);
 
   // Définition des services proposés avec leurs détails
-  const services = [
+  const services: Service[] = [
     {
       title: t('clearance'),
       description: t('clearanceDesc'),
