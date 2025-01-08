@@ -35,27 +35,26 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install Dependencies
+          node-version: '16.20.0'
+          
+      - name: Clean install dependencies
         run: |
-          npm ci
-          cd server && npm ci && cd ..
-
+          rm -rf node_modules package-lock.json
+          npm install
+        
       - name: Build
         run: npm run build
         env:
           CI: false
-
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: 'dist'
-
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
